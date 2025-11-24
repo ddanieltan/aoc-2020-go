@@ -1,0 +1,10 @@
+# In: <project>/.gemini/commands/learnings.toml
+# Invoked via: /learnings day01
+
+prompt = """
+You are reviewing coding solutions to Advent of Code 2020. In the directory {{args}}, read the solution in main.go. Provide critique and suggestions of the solution to help me become a better Golang programmer. Write these learnings in learnings.md.
+
+Ignore the following issues:
+- The `part1` and `part2` functions handle errors from `utils.ReadLines` by returning `0`
+- In the `main` function, the variables holding the results are named `part1` and `part2`, which are the same as the function names. (Variable shadowing)
+"""
