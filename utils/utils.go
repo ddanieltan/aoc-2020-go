@@ -6,6 +6,14 @@ import (
 	"strconv"
 )
 
+func ReadString(path string) (string, error) {
+	bytes, err := os.ReadFile(path)
+	if err != nil {
+		panic(err)
+	}
+	return string(bytes), nil
+}
+
 func ReadLines(path string) ([]string, error) {
 	file, err := os.Open(path)
 	if err != nil {
