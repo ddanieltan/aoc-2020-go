@@ -107,11 +107,10 @@ func hasValidFields(fields []string) bool {
 }
 
 func part1(path string) int {
-	input, err := utils.ReadString(path)
+	passports, err := utils.ReadDoubleLines(path)
 	if err != nil {
 		return 0
 	}
-	passports := strings.Split(input, "\n\n")
 
 	var valid int
 	for _, passport := range passports {
@@ -125,11 +124,10 @@ func part1(path string) int {
 }
 
 func part2(path string) int {
-	input, err := utils.ReadString(path)
+	passports, err := utils.ReadDoubleLines(path)
 	if err != nil {
 		return 0
 	}
-	passports := strings.Split(input, "\n\n")
 
 	var valid int
 	for _, passport := range passports {
